@@ -4,6 +4,7 @@ b varchar2( 100 ) := 'Иванов';
 c varchar2( 100 ) := 'Иванович';
 d varchar2( 100 ) := 'instrumental';
 e varchar2( 100 ) := 'male';
+
 FUNCTION petrovich( pv_firstname IN OUT VARCHAR2, pv_lastname IN OUT VARCHAR2, 
                 pv_middlename IN OUT VARCHAR2, p_gcase VARCHAR2, p_gender VARCHAR2 DEFAULT NULL) RETURN VARCHAR2 IS
 /*
@@ -48,7 +49,7 @@ XMLTYPE('<?xml version="1.0"?>
                     <test>гамарра</test>
                     <test>петипа</test>
                     <test>шандра</test>
-                    <test>скал¤</test>
+                    <test>скаля</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </exception>
@@ -74,7 +75,7 @@ XMLTYPE('<?xml version="1.0"?>
                     <test>цой</test>
                     <test>хой</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </exception>
         </exceptions>
         <suffixes>
@@ -122,13 +123,13 @@ XMLTYPE('<?xml version="1.0"?>
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>а¤</test>
+                    <test>ая</test>
                 </tests>
                 <mods genitive="--ой" dative="--ой" accusative="--ую" instrumental="--ой" prepositional="--ой" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ска¤</test>
+                    <test>ская</test>
                 </tests>
                 <mods genitive="--ой" dative="--ой" accusative="--ую" instrumental="--ой" prepositional="--ой" />
             </suffix>
@@ -142,13 +143,13 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>иной</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
                     <test>уй</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
@@ -164,7 +165,7 @@ XMLTYPE('<?xml version="1.0"?>
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>и¤</test>
+                    <test>ия</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
@@ -234,17 +235,17 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>ь</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>и¤</test>
+                    <test>ия</test>
                 </tests>
                 <mods genitive="-и" dative="-и" accusative="-ю" instrumental="-ей" prepositional="-и" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>¤</test>
+                    <test>я</test>
                 </tests>
                 <mods genitive="-и" dative="-е" accusative="-ю" instrumental="-ей" prepositional="-е" />
             </suffix>
@@ -252,11 +253,11 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>ей</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>¤н</test>
+                    <test>ян</test>
                     <test>ан</test>
                     <test>йн</test>
                 </tests>
@@ -280,7 +281,7 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>ай</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
@@ -322,7 +323,7 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>ий</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-и" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-и" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
@@ -383,7 +384,7 @@ XMLTYPE('<?xml version="1.0"?>
             </exception>
             <exception gender="androgynous">
                 <tests>
-                    <test>пЄтр</test>
+                    <test>пётр</test>
                 </tests>
                 <mods genitive="---етра" dative="---етру" accusative="---етра" instrumental="---етром" prepositional="---етре" />
             </exception>
@@ -414,7 +415,7 @@ XMLTYPE('<?xml version="1.0"?>
             <suffix gender="androgynous">
                 <tests>
                     <test>е</test>
-                    <test>Є</test>
+                    <test>ё</test>
                     <test>и</test>
                     <test>о</test>
                     <test>у</test>
@@ -461,7 +462,7 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>ь</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
@@ -488,13 +489,13 @@ XMLTYPE('<?xml version="1.0"?>
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>и¤</test>
+                    <test>ия</test>
                 </tests>
                 <mods genitive="-и" dative="-и" accusative="-ю" instrumental="-ей" prepositional="-и" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>¤</test>
+                    <test>я</test>
                 </tests>
                 <mods genitive="-и" dative="-е" accusative="-ю" instrumental="-ей" prepositional="-е" />
             </suffix>
@@ -502,19 +503,19 @@ XMLTYPE('<?xml version="1.0"?>
                 <tests>
                     <test>ей</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
                     <test>ий</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-и" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-и" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
                     <test>й</test>
                 </tests>
-                <mods genitive="-¤" dative="-ю" accusative="-¤" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
