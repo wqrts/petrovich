@@ -1,16 +1,16 @@
 DECLARE
-a varchar2( 100 ) := 'Иван';
-b varchar2( 100 ) := 'Иванов';
-c varchar2( 100 ) := 'Иванович';
+a varchar2( 100 ) := 'РРІР°РЅ';
+b varchar2( 100 ) := 'РРІР°РЅРѕРІ';
+c varchar2( 100 ) := 'РРІР°РЅРѕРІРёС‡';
 d varchar2( 100 ) := 'instrumental';
 e varchar2( 100 ) := 'male';
 FUNCTION petrovich( pv_firstname IN OUT VARCHAR2, pv_lastname IN OUT VARCHAR2, 
                 pv_middlename IN OUT VARCHAR2, p_gcase VARCHAR2, p_gender VARCHAR2 DEFAULT NULL) RETURN VARCHAR2 IS
 /*
  * p_gcase IN nominative   genitive    dative    accusative  instrumental prepositional
- * падеж      именительный родительный дательный винительный творительный предложный
+ * РїР°РґРµР¶      РёРјРµРЅРёС‚РµР»СЊРЅС‹Р№ СЂРѕРґРёС‚РµР»СЊРЅС‹Р№ РґР°С‚РµР»СЊРЅС‹Р№ РІРёРЅРёС‚РµР»СЊРЅС‹Р№ С‚РІРѕСЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРµРґР»РѕР¶РЅС‹Р№
  * p_gender OPTIONAL IN male    female
-   пол                  мужской женский
+   РїРѕР»                  РјСѓР¶СЃРєРѕР№ Р¶РµРЅСЃРєРёР№
  */
   v_gender VARCHAR2( 20 );
   c_rules XMLTYPE := 
@@ -20,356 +20,356 @@ XMLTYPE('<?xml version="1.0"?>
         <exceptions>
             <exception gender="androgynous">
                 <tests>
-                    <test>бонч</test>
-                    <test>абдул</test>
-                    <test>белиц</test>
-                    <test>гасан</test>
-                    <test>дюссар</test>
-                    <test>дюмон</test>
-                    <test>книппер</test>
-                    <test>корвин</test>
-                    <test>ван</test>
-                    <test>шолом</test>
-                    <test>тер</test>
-                    <test>призван</test>
-                    <test>мелик</test>
-                    <test>вар</test>
+                    <test>Р±РѕРЅС‡</test>
+                    <test>Р°Р±РґСѓР»</test>
+                    <test>Р±РµР»РёС†</test>
+                    <test>РіР°СЃР°РЅ</test>
+                    <test>РґСЋСЃСЃР°СЂ</test>
+                    <test>РґСЋРјРѕРЅ</test>
+                    <test>РєРЅРёРїРїРµСЂ</test>
+                    <test>РєРѕСЂРІРёРЅ</test>
+                    <test>РІР°РЅ</test>
+                    <test>С€РѕР»РѕРј</test>
+                    <test>С‚РµСЂ</test>
+                    <test>РїСЂРёР·РІР°РЅ</test>
+                    <test>РјРµР»РёРє</test>
+                    <test>РІР°СЂ</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
                 <tags><first_word /></tags>
             </exception>
             <exception gender="androgynous">
                 <tests>
-                    <test>дюма</test>
-                    <test>тома</test>
-                    <test>дега</test>
-                    <test>люка</test>
-                    <test>ферма</test>
-                    <test>гамарра</test>
-                    <test>петипа</test>
-                    <test>шандра</test>
-                    <test>скаля</test>
+                    <test>РґСЋРјР°</test>
+                    <test>С‚РѕРјР°</test>
+                    <test>РґРµРіР°</test>
+                    <test>Р»СЋРєР°</test>
+                    <test>С„РµСЂРјР°</test>
+                    <test>РіР°РјР°СЂСЂР°</test>
+                    <test>РїРµС‚РёРїР°</test>
+                    <test>С€Р°РЅРґСЂР°</test>
+                    <test>СЃРєР°Р»В¤</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </exception>
             <exception gender="androgynous">
                 <tests>
-                    <test>гусь</test>
-                    <test>ремень</test>
-                    <test>камень</test>
-                    <test>онук</test>
-                    <test>богода</test>
-                    <test>нечипас</test>
-                    <test>долгопалец</test>
-                    <test>маненок</test>
-                    <test>рева</test>
-                    <test>кива</test>
+                    <test>РіСѓСЃСЊ</test>
+                    <test>СЂРµРјРµРЅСЊ</test>
+                    <test>РєР°РјРµРЅСЊ</test>
+                    <test>РѕРЅСѓРє</test>
+                    <test>Р±РѕРіРѕРґР°</test>
+                    <test>РЅРµС‡РёРїР°СЃ</test>
+                    <test>РґРѕР»РіРѕРїР°Р»РµС†</test>
+                    <test>РјР°РЅРµРЅРѕРє</test>
+                    <test>СЂРµРІР°</test>
+                    <test>РєРёРІР°</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </exception>
             <exception gender="androgynous">
                 <tests>
-                    <test>вий</test>
-                    <test>сой</test>
-                    <test>цой</test>
-                    <test>хой</test>
+                    <test>РІРёР№</test>
+                    <test>СЃРѕР№</test>
+                    <test>С†РѕР№</test>
+                    <test>С…РѕР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </exception>
         </exceptions>
         <suffixes>
             <suffix gender="female">
                 <tests>
-                    <test>б</test>
-                    <test>в</test>
-                    <test>г</test>
-                    <test>д</test>
-                    <test>ж</test>
-                    <test>з</test>
-                    <test>й</test>
-                    <test>к</test>
-                    <test>л</test>
-                    <test>м</test>
-                    <test>н</test>
-                    <test>п</test>
-                    <test>р</test>
-                    <test>с</test>
-                    <test>т</test>
-                    <test>ф</test>
-                    <test>х</test>
-                    <test>ц</test>
-                    <test>ч</test>
-                    <test>ш</test>
-                    <test>щ</test>
-                    <test>ъ</test>
-                    <test>ь</test>
+                    <test>Р±</test>
+                    <test>РІ</test>
+                    <test>Рі</test>
+                    <test>Рґ</test>
+                    <test>Р¶</test>
+                    <test>Р·</test>
+                    <test>Р№</test>
+                    <test>Рє</test>
+                    <test>Р»</test>
+                    <test>Рј</test>
+                    <test>РЅ</test>
+                    <test>Рї</test>
+                    <test>СЂ</test>
+                    <test>СЃ</test>
+                    <test>С‚</test>
+                    <test>С„</test>
+                    <test>С…</test>
+                    <test>С†</test>
+                    <test>С‡</test>
+                    <test>С€</test>
+                    <test>С‰</test>
+                    <test>СЉ</test>
+                    <test>СЊ</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>гава</test>
-                    <test>орота</test>
+                    <test>РіР°РІР°</test>
+                    <test>РѕСЂРѕС‚Р°</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>ска</test>
-                    <test>цка</test>
+                    <test>СЃРєР°</test>
+                    <test>С†РєР°</test>
                 </tests>
-                <mods genitive="-ой" dative="-ой" accusative="-ую" instrumental="-ой" prepositional="-ой" />
+                <mods genitive="-РѕР№" dative="-РѕР№" accusative="-СѓСЋ" instrumental="-РѕР№" prepositional="-РѕР№" />
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>ая</test>
+                    <test>Р°В¤</test>
                 </tests>
-                <mods genitive="--ой" dative="--ой" accusative="--ую" instrumental="--ой" prepositional="--ой" />
+                <mods genitive="--РѕР№" dative="--РѕР№" accusative="--СѓСЋ" instrumental="--РѕР№" prepositional="--РѕР№" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ская</test>
+                    <test>СЃРєР°В¤</test>
                 </tests>
-                <mods genitive="--ой" dative="--ой" accusative="--ую" instrumental="--ой" prepositional="--ой" />
+                <mods genitive="--РѕР№" dative="--РѕР№" accusative="--СѓСЋ" instrumental="--РѕР№" prepositional="--РѕР№" />
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>на</test>
+                    <test>РЅР°</test>
                 </tests>
-                <mods genitive="-ой" dative="-ой" accusative="-у" instrumental="-ой" prepositional="-ой" />
+                <mods genitive="-РѕР№" dative="-РѕР№" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-РѕР№" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>иной</test>
+                    <test>РёРЅРѕР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>уй</test>
+                    <test>СѓР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ца</test>
+                    <test>С†Р°</test>
                 </tests>
-                <mods genitive="-ы" dative="-е" accusative="-у" instrumental="-ей" prepositional="-е" />
+                <mods genitive="-С‹" dative="-Рµ" accusative="-Сѓ" instrumental="-РµР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>рих</test>
+                    <test>СЂРёС…</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ом" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РѕРј" prepositional="Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ия</test>
+                    <test>РёВ¤</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>иа</test>
-                    <test>аа</test>
-                    <test>оа</test>
-                    <test>уа</test>
-                    <test>ыа</test>
-                    <test>еа</test>
-                    <test>юа</test>
-                    <test>эа</test>
+                    <test>РёР°</test>
+                    <test>Р°Р°</test>
+                    <test>РѕР°</test>
+                    <test>СѓР°</test>
+                    <test>С‹Р°</test>
+                    <test>РµР°</test>
+                    <test>СЋР°</test>
+                    <test>СЌР°</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>их</test>
-                    <test>ых</test>
+                    <test>РёС…</test>
+                    <test>С‹С…</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>о</test>
-                    <test>е</test>
-                    <test>э</test>
-                    <test>и</test>
-                    <test>ы</test>
-                    <test>у</test>
-                    <test>ю</test>
+                    <test>Рѕ</test>
+                    <test>Рµ</test>
+                    <test>СЌ</test>
+                    <test>Рё</test>
+                    <test>С‹</test>
+                    <test>Сѓ</test>
+                    <test>СЋ</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ова</test>
-                    <test>ева</test>
+                    <test>РѕРІР°</test>
+                    <test>РµРІР°</test>
                 </tests>
-                <mods genitive="-ой" dative="-ой" accusative="-у" instrumental="-ой" prepositional="-ой" />
+                <mods genitive="-РѕР№" dative="-РѕР№" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-РѕР№" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>га</test>
-                    <test>ка</test>
-                    <test>ха</test>
-                    <test>ча</test>
-                    <test>ща</test>
-                    <test>жа</test>
+                    <test>РіР°</test>
+                    <test>РєР°</test>
+                    <test>С…Р°</test>
+                    <test>С‡Р°</test>
+                    <test>С‰Р°</test>
+                    <test>Р¶Р°</test>
                 </tests>
-                <mods genitive="-и" dative="-е" accusative="-у" instrumental="-ой" prepositional="-е" />
+                <mods genitive="-Рё" dative="-Рµ" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ца</test>
+                    <test>С†Р°</test>
                 </tests>
-                <mods genitive="-и" dative="-е" accusative="-у" instrumental="-ей" prepositional="-е" />
+                <mods genitive="-Рё" dative="-Рµ" accusative="-Сѓ" instrumental="-РµР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>а</test>
+                    <test>Р°</test>
                 </tests>
-                <mods genitive="-ы" dative="-е" accusative="-у" instrumental="-ой" prepositional="-е" />
+                <mods genitive="-С‹" dative="-Рµ" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ь</test>
+                    <test>СЊ</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ия</test>
+                    <test>РёВ¤</test>
                 </tests>
-                <mods genitive="-и" dative="-и" accusative="-ю" instrumental="-ей" prepositional="-и" />
+                <mods genitive="-Рё" dative="-Рё" accusative="-СЋ" instrumental="-РµР№" prepositional="-Рё" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>я</test>
+                    <test>В¤</test>
                 </tests>
-                <mods genitive="-и" dative="-е" accusative="-ю" instrumental="-ей" prepositional="-е" />
+                <mods genitive="-Рё" dative="-Рµ" accusative="-СЋ" instrumental="-РµР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ей</test>
+                    <test>РµР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ян</test>
-                    <test>ан</test>
-                    <test>йн</test>
+                    <test>В¤РЅ</test>
+                    <test>Р°РЅ</test>
+                    <test>Р№РЅ</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ом" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РѕРј" prepositional="Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ынец</test>
-                    <test>обец</test>
+                    <test>С‹РЅРµС†</test>
+                    <test>РѕР±РµС†</test>
                 </tests>
-                <mods genitive="--ца" dative="--цу" accusative="--ца" instrumental="--цем" prepositional="--це" />
+                <mods genitive="--С†Р°" dative="--С†Сѓ" accusative="--С†Р°" instrumental="--С†РµРј" prepositional="--С†Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>онец</test>
-                    <test>овец</test>
+                    <test>РѕРЅРµС†</test>
+                    <test>РѕРІРµС†</test>
                 </tests>
-                <mods genitive="--ца" dative="--цу" accusative="--ца" instrumental="--цом" prepositional="--це" />
+                <mods genitive="--С†Р°" dative="--С†Сѓ" accusative="--С†Р°" instrumental="--С†РѕРј" prepositional="--С†Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ай</test>
+                    <test>Р°Р№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>гой</test>
-                    <test>кой</test>
+                    <test>РіРѕР№</test>
+                    <test>РєРѕР№</test>
                 </tests>
-                <mods genitive="-го" dative="-му" accusative="-го" instrumental="-им" prepositional="-м" />
+                <mods genitive="-РіРѕ" dative="-РјСѓ" accusative="-РіРѕ" instrumental="-РёРј" prepositional="-Рј" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ой</test>
+                    <test>РѕР№</test>
                 </tests>
-                <mods genitive="-го" dative="-му" accusative="-го" instrumental="-ым" prepositional="-м" />
+                <mods genitive="-РіРѕ" dative="-РјСѓ" accusative="-РіРѕ" instrumental="-С‹Рј" prepositional="-Рј" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ах</test>
-                    <test>ив</test>
+                    <test>Р°С…</test>
+                    <test>РёРІ</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ом" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РѕРј" prepositional="Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ший</test>
-                    <test>щий</test>
-                    <test>жий</test>
-                    <test>ний</test>
+                    <test>С€РёР№</test>
+                    <test>С‰РёР№</test>
+                    <test>Р¶РёР№</test>
+                    <test>РЅРёР№</test>
                 </tests>
-                <mods genitive="--его" dative="--ему" accusative="--его" instrumental="-м" prepositional="--ем" />
+                <mods genitive="--РµРіРѕ" dative="--РµРјСѓ" accusative="--РµРіРѕ" instrumental="-Рј" prepositional="--РµРј" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>кий</test>
-                    <test>ый</test>
+                    <test>РєРёР№</test>
+                    <test>С‹Р№</test>
                 </tests>
-                <mods genitive="--ого" dative="--ому" accusative="--ого" instrumental="-м" prepositional="--ом" />
+                <mods genitive="--РѕРіРѕ" dative="--РѕРјСѓ" accusative="--РѕРіРѕ" instrumental="-Рј" prepositional="--РѕРј" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ий</test>
+                    <test>РёР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-и" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рё" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ок</test>
+                    <test>РѕРє</test>
                 </tests>
-                <mods genitive="--ка" dative="--ку" accusative="--ка" instrumental="--ком" prepositional="--ке" />
+                <mods genitive="--РєР°" dative="--РєСѓ" accusative="--РєР°" instrumental="--РєРѕРј" prepositional="--РєРµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ец</test>
+                    <test>РµС†</test>
                 </tests>
-                <mods genitive="--ца" dative="--цу" accusative="--ца" instrumental="--цом" prepositional="--це" />
+                <mods genitive="--С†Р°" dative="--С†Сѓ" accusative="--С†Р°" instrumental="--С†РѕРј" prepositional="--С†Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ц</test>
-                    <test>ч</test>
-                    <test>ш</test>
-                    <test>щ</test>
+                    <test>С†</test>
+                    <test>С‡</test>
+                    <test>С€</test>
+                    <test>С‰</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ем" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РµРј" prepositional="Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>в</test>
-                    <test>н</test>
+                    <test>РІ</test>
+                    <test>РЅ</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ым" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="С‹Рј" prepositional="Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>б</test>
-                    <test>г</test>
-                    <test>д</test>
-                    <test>ж</test>
-                    <test>з</test>
-                    <test>к</test>
-                    <test>л</test>
-                    <test>м</test>
-                    <test>п</test>
-                    <test>р</test>
-                    <test>с</test>
-                    <test>т</test>
-                    <test>ф</test>
-                    <test>х</test>
+                    <test>Р±</test>
+                    <test>Рі</test>
+                    <test>Рґ</test>
+                    <test>Р¶</test>
+                    <test>Р·</test>
+                    <test>Рє</test>
+                    <test>Р»</test>
+                    <test>Рј</test>
+                    <test>Рї</test>
+                    <test>СЂ</test>
+                    <test>СЃ</test>
+                    <test>С‚</test>
+                    <test>С„</test>
+                    <test>С…</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ом" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РѕРј" prepositional="Рµ" />
             </suffix>
         </suffixes>
     </lastname>
@@ -377,35 +377,35 @@ XMLTYPE('<?xml version="1.0"?>
         <exceptions>
             <exception gender="androgynous">
                 <tests>
-                    <test>лев</test>
+                    <test>Р»РµРІ</test>
                 </tests>
-                <mods genitive="--ьва" dative="--ьву" accusative="--ьва" instrumental="--ьвом" prepositional="--ьве" />
+                <mods genitive="--СЊРІР°" dative="--СЊРІСѓ" accusative="--СЊРІР°" instrumental="--СЊРІРѕРј" prepositional="--СЊРІРµ" />
             </exception>
             <exception gender="androgynous">
                 <tests>
-                    <test>пётр</test>
+                    <test>РїР„С‚СЂ</test>
                 </tests>
-                <mods genitive="---етра" dative="---етру" accusative="---етра" instrumental="---етром" prepositional="---етре" />
+                <mods genitive="---РµС‚СЂР°" dative="---РµС‚СЂСѓ" accusative="---РµС‚СЂР°" instrumental="---РµС‚СЂРѕРј" prepositional="---РµС‚СЂРµ" />
             </exception>
             <exception gender="androgynous">
                 <tests>
-                    <test>павел</test>
+                    <test>РїР°РІРµР»</test>
                 </tests>
-                <mods genitive="--ла" dative="--лу" accusative="--ла" instrumental="--лом" prepositional="--ле" />
+                <mods genitive="--Р»Р°" dative="--Р»Сѓ" accusative="--Р»Р°" instrumental="--Р»РѕРј" prepositional="--Р»Рµ" />
             </exception>
             <exception gender="male">
                 <tests>
-                    <test>шота</test>
+                    <test>С€РѕС‚Р°</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </exception>
             <exception gender="female">
                 <tests>
-                    <test>рашель</test>
-                    <test>нинель</test>
-                    <test>николь</test>
-                    <test>габриэль</test>
-                    <test>даниэль</test>
+                    <test>СЂР°С€РµР»СЊ</test>
+                    <test>РЅРёРЅРµР»СЊ</test>
+                    <test>РЅРёРєРѕР»СЊ</test>
+                    <test>РіР°Р±СЂРёСЌР»СЊ</test>
+                    <test>РґР°РЅРёСЌР»СЊ</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </exception>
@@ -413,131 +413,131 @@ XMLTYPE('<?xml version="1.0"?>
         <suffixes>
             <suffix gender="androgynous">
                 <tests>
-                    <test>е</test>
-                    <test>ё</test>
-                    <test>и</test>
-                    <test>о</test>
-                    <test>у</test>
-                    <test>ы</test>
-                    <test>э</test>
-                    <test>ю</test>
+                    <test>Рµ</test>
+                    <test>Р„</test>
+                    <test>Рё</test>
+                    <test>Рѕ</test>
+                    <test>Сѓ</test>
+                    <test>С‹</test>
+                    <test>СЌ</test>
+                    <test>СЋ</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>б</test>
-                    <test>в</test>
-                    <test>г</test>
-                    <test>д</test>
-                    <test>ж</test>
-                    <test>з</test>
-                    <test>й</test>
-                    <test>к</test>
-                    <test>л</test>
-                    <test>м</test>
-                    <test>н</test>
-                    <test>п</test>
-                    <test>р</test>
-                    <test>с</test>
-                    <test>т</test>
-                    <test>ф</test>
-                    <test>х</test>
-                    <test>ц</test>
-                    <test>ч</test>
-                    <test>ш</test>
-                    <test>щ</test>
-                    <test>ъ</test>
+                    <test>Р±</test>
+                    <test>РІ</test>
+                    <test>Рі</test>
+                    <test>Рґ</test>
+                    <test>Р¶</test>
+                    <test>Р·</test>
+                    <test>Р№</test>
+                    <test>Рє</test>
+                    <test>Р»</test>
+                    <test>Рј</test>
+                    <test>РЅ</test>
+                    <test>Рї</test>
+                    <test>СЂ</test>
+                    <test>СЃ</test>
+                    <test>С‚</test>
+                    <test>С„</test>
+                    <test>С…</test>
+                    <test>С†</test>
+                    <test>С‡</test>
+                    <test>С€</test>
+                    <test>С‰</test>
+                    <test>СЉ</test>
                 </tests>
                 <mods genitive="" dative="" accusative="" instrumental="" prepositional="" />
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>ь</test>
+                    <test>СЊ</test>
                 </tests>
-                <mods genitive="-и" dative="-и" accusative="" instrumental="ю" prepositional="-и" />
+                <mods genitive="-Рё" dative="-Рё" accusative="" instrumental="СЋ" prepositional="-Рё" />
             </suffix>
             <suffix gender="male">
                 <tests>
-                    <test>ь</test>
+                    <test>СЊ</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>га</test>
-                    <test>ка</test>
-                    <test>ха</test>
-                    <test>ча</test>
-                    <test>ща</test>
-                    <test>жа</test>
+                    <test>РіР°</test>
+                    <test>РєР°</test>
+                    <test>С…Р°</test>
+                    <test>С‡Р°</test>
+                    <test>С‰Р°</test>
+                    <test>Р¶Р°</test>
                 </tests>
-                <mods genitive="-и" dative="-е" accusative="-у" instrumental="-ой" prepositional="-е" />
+                <mods genitive="-Рё" dative="-Рµ" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="female">
                 <tests>
-                    <test>ша</test>
+                    <test>С€Р°</test>
                 </tests>
-                <mods genitive="-и" dative="-е" accusative="-у" instrumental="-ей" prepositional="-е" />
+                <mods genitive="-Рё" dative="-Рµ" accusative="-Сѓ" instrumental="-РµР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>а</test>
+                    <test>Р°</test>
                 </tests>
-                <mods genitive="-ы" dative="-е" accusative="-у" instrumental="-ой" prepositional="-е" />
+                <mods genitive="-С‹" dative="-Рµ" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ия</test>
+                    <test>РёВ¤</test>
                 </tests>
-                <mods genitive="-и" dative="-и" accusative="-ю" instrumental="-ей" prepositional="-и" />
+                <mods genitive="-Рё" dative="-Рё" accusative="-СЋ" instrumental="-РµР№" prepositional="-Рё" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>я</test>
+                    <test>В¤</test>
                 </tests>
-                <mods genitive="-и" dative="-е" accusative="-ю" instrumental="-ей" prepositional="-е" />
+                <mods genitive="-Рё" dative="-Рµ" accusative="-СЋ" instrumental="-РµР№" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ей</test>
+                    <test>РµР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ий</test>
+                    <test>РёР№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-и" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рё" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>й</test>
+                    <test>Р№</test>
                 </tests>
-                <mods genitive="-я" dative="-ю" accusative="-я" instrumental="-ем" prepositional="-е" />
+                <mods genitive="-В¤" dative="-СЋ" accusative="-В¤" instrumental="-РµРј" prepositional="-Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>б</test>
-                    <test>в</test>
-                    <test>г</test>
-                    <test>д</test>
-                    <test>ж</test>
-                    <test>з</test>
-                    <test>к</test>
-                    <test>л</test>
-                    <test>м</test>
-                    <test>н</test>
-                    <test>п</test>
-                    <test>р</test>
-                    <test>с</test>
-                    <test>т</test>
-                    <test>ф</test>
-                    <test>х</test>
-                    <test>ц</test>
-                    <test>ч</test>
+                    <test>Р±</test>
+                    <test>РІ</test>
+                    <test>Рі</test>
+                    <test>Рґ</test>
+                    <test>Р¶</test>
+                    <test>Р·</test>
+                    <test>Рє</test>
+                    <test>Р»</test>
+                    <test>Рј</test>
+                    <test>РЅ</test>
+                    <test>Рї</test>
+                    <test>СЂ</test>
+                    <test>СЃ</test>
+                    <test>С‚</test>
+                    <test>С„</test>
+                    <test>С…</test>
+                    <test>С†</test>
+                    <test>С‡</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ом" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РѕРј" prepositional="Рµ" />
             </suffix>
         </suffixes>
     </firstname>
@@ -547,15 +547,15 @@ XMLTYPE('<?xml version="1.0"?>
         <suffixes>
             <suffix gender="androgynous">
                 <tests>
-                    <test>ич</test>
+                    <test>РёС‡</test>
                 </tests>
-                <mods genitive="а" dative="у" accusative="а" instrumental="ем" prepositional="е" />
+                <mods genitive="Р°" dative="Сѓ" accusative="Р°" instrumental="РµРј" prepositional="Рµ" />
             </suffix>
             <suffix gender="androgynous">
                 <tests>
-                    <test>на</test>
+                    <test>РЅР°</test>
                 </tests>
-                <mods genitive="-ы" dative="-е" accusative="-у" instrumental="-ой" prepositional="-е" />
+                <mods genitive="-С‹" dative="-Рµ" accusative="-Сѓ" instrumental="-РѕР№" prepositional="-Рµ" />
             </suffix>
         </suffixes>
     </middlename>
@@ -641,8 +641,8 @@ BEGIN
   v_gender :=
     CASE
       WHEN( LOWER( p_gender ) IN( 'male', 'female' ) ) THEN LOWER( p_gender ) 
-      WHEN( LOWER( SUBSTR( pv_middlename, -2 ) ) = 'ич' OR LOWER( SUBSTR( pv_middlename, -4 ) ) = 'оглы' ) THEN 'male'
-      WHEN( LOWER( SUBSTR( pv_middlename, -2 ) ) = 'на' OR LOWER( SUBSTR( pv_middlename, -4 ) ) = 'кызы' ) THEN 'female'
+      WHEN( LOWER( SUBSTR( pv_middlename, -2 ) ) = 'РёС‡' OR LOWER( SUBSTR( pv_middlename, -4 ) ) = 'РѕРіР»С‹' ) THEN 'male'
+      WHEN( LOWER( SUBSTR( pv_middlename, -2 ) ) = 'РЅР°' OR LOWER( SUBSTR( pv_middlename, -4 ) ) = 'РєС‹Р·С‹' ) THEN 'female'
       ELSE 'androgynous'
     END;
 
